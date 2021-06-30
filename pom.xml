@@ -7,7 +7,7 @@
     <groupId>com.dcc</groupId>
     <artifactId>springcloud-alibaba</artifactId>
     <packaging>pom</packaging>
-    <version>${dcc-parent.version}</version>
+    <version>1.0.0</version>
     <modules>
         <module>common</module>
         <module>user</module>
@@ -23,11 +23,11 @@
     <!--版本号统一管理-->
 
     <properties>
-        <java.version>16</java.version>
+        <java.version>15</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
         <!--spring cloud-->
         <spring-cloud.version>2020.0.0</spring-cloud.version>
         <!--spring cloud alibaba-->
