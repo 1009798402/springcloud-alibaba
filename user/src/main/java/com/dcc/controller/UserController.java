@@ -1,6 +1,11 @@
 package com.dcc.controller;
 
-import org.springframework.web.bind.annotation.RestController;
+import com.dcc.domain.User;
+import com.dcc.domain.dto.UserDto;
+import com.dcc.service.UserService;
+import com.dcc.util.DomainHelper;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author jianchun.chen
@@ -8,4 +13,18 @@ import org.springframework.web.bind.annotation.RestController;
  *     <p>
  */
 @RestController
-public class UserController {}
+@RequiredArgsConstructor
+public class UserController {
+
+  private final UserService userService;
+
+  @GetMapping("/{id}")
+  public User getUser(@PathVariable long id) {
+    return userService.getById(id);
+  }
+
+  @PostMapping
+  public void save(@RequestBody UserDto userDto) {
+    userService.save(DomainHelper.dto2Entity(userDto, User.class));
+  }
+}

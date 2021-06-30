@@ -1,11 +1,11 @@
 package com.dcc.service;
 
-import org.springframework.stereotype.Service;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.dcc.domain.User;
 
 /**
  * @author jianchun.chen
- * @date 2021/6/30 18:56
- *     <p>
+ * @date 2021/6/30 23:49
+ *     <p>-----
  */
-@Service
-public class UserService {}
+public interface UserService extends IService<User> {}

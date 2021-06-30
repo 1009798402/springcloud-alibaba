@@ -1,6 +1,8 @@
 package com.dcc.domain;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
@@ -15,9 +17,11 @@ import java.time.LocalDateTime;
 public class BaseDomain {
 
   @TableId(type = IdType.AUTO)
-  private long id;
+  private Long id;
 
+  @TableField(fill = FieldFill.INSERT)
   private LocalDateTime createAt;
 
+  @TableField(fill = FieldFill.INSERT_UPDATE)
   private LocalDateTime updateAt;
 }

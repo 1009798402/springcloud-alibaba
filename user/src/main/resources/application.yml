@@ -5,10 +5,10 @@ spring:
     name: service-user
   #hikari 连接池
   datasource:
+    url: jdbc:mysql://172.16.1.22:3306/spring-cloud-albaba?useUnicode=true&characterEncoding=UTF-8&useSSL=false&useAffectedRows=true
+    password: Bz5jdUgzdo6HXA7x
+    username: douchacha
     hikari:
-      jdbc-url: jdbc:mysql://172.16.1.22:3306/spring-cloud-albaba?useUnicode=true&characterEncoding=UTF-8&useSSL=false&useAffectedRows=true
-      password: Bz5jdUgzdo6HXA7x
-      username: douchacha
       minimum-idle: 5
       idle-timeout: 180000
       maximum-pool-size: 5
@@ -17,3 +17,4 @@ spring:
       max-lifetime: 1800000
       connection-timeout: 30000
       connection-test-query: select now()
+
