@@ -39,7 +39,7 @@ public class CodeGenerator {
       "jdbc:mysql://172.16.1.22:3306/spring-cloud-albaba?useUnicode=true&characterEncoding=UTF-8&useSSL=false&useAffectedRows=true";
 
   public static final String JDBC_DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
-  public static final String JDBC_USERNAME = "dcc";
+  public static final String JDBC_USERNAME = "douchacha";
   public static final String JDBC_PASSWORD = "Bz5jdUgzdo6HXA7x";
 
   public static void main(String[] args) {
