@@ -1,4 +1,4 @@
-package dcc.domain.dto;
+package com.dcc.domain.dto;
 
 import lombok.Data;
 
@@ -10,7 +10,7 @@ import lombok.Data;
 @Data
 public class GoodsDto {
 
-  private String username;
-  private String password;
-  private String phone;
+  private String goodsName;
+  private Integer price;
+  private Integer stock;
 }

@@ -1,8 +1,7 @@
-package dcc.mapper;
+package com.dcc.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.dcc.domain.Goods;
-import com.dcc.domain.User;
 
 /**
  * @author jianchun.chen

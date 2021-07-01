@@ -13,6 +13,6 @@ import lombok.EqualsAndHashCode;
 public class Goods extends BaseDomain {
 
   private String goodsName;
-  private int price;
-  private int stock;
+  private Integer price;
+  private Integer stock;
 }

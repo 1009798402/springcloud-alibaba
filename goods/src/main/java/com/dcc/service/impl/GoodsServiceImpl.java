@@ -1,10 +1,9 @@
-package dcc.service.impl;
+package com.dcc.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.dcc.domain.Goods;
-import dcc.mapper.GoodsMapper;
-import dcc.service.GoodsService;
-import lombok.RequiredArgsConstructor;
+import com.dcc.mapper.GoodsMapper;
+import com.dcc.service.GoodsService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,5 +12,4 @@ import org.springframework.stereotype.Service;
  *     <p>
  */
 @Service
-@RequiredArgsConstructor
 public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements GoodsService {}

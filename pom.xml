@@ -13,6 +13,7 @@
         <module>user</module>
         <module>goods</module>
         <module>generator</module>
+        <module>order</module>
     </modules>
 
     <!--父工程-->
@@ -42,12 +43,13 @@
         <mybatis-plus.version>3.4.3.1</mybatis-plus.version>
         <!--mybatis-代码生成-->
         <mybatis-plus-generator.version>3.0.1</mybatis-plus-generator.version>
-        <velocity-engine-core.version>2.2</velocity-engine-core.version>
+        <javafx-controls.version>16</javafx-controls.version>
 
         <!--各个微服务的版本号-->
         <dcc-parent.version>1.0.0</dcc-parent.version>
         <dcc-common.version>1.0.0</dcc-common.version>
         <dcc-user.version>1.0.0</dcc-user.version>
+        <dcc-com.dcc.order.version>1.0.0</dcc-com.dcc.order.version>
     </properties>
 
     <dependencyManagement>

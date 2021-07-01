@@ -1,4 +1,4 @@
-package dcc;
+package com.dcc;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

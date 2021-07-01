@@ -1,4 +1,4 @@
-package dcc.service;
+package com.dcc.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.dcc.domain.Goods;

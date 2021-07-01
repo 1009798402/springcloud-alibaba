@@ -1,0 +1,20 @@
+package ${package.Mapper};
+
+import com.dcc.domain.${entity};
+import ${superMapperClassPackage};
+import org.apache.ibatis.annotations.CacheNamespace;
+import com.hc.keep.management.common.redis.MybatisRedisCache;
+
+/**
+ * @auther ${author}
+ * @create ${cfg.dateTime}
+ * @describe $!{table.comment}mapper类
+ */
+#if(${kotlin})
+interface ${table.mapperName} : ${superMapperClass}<${entity}>
+#else
+@CacheNamespace(implementation = MybatisRedisCache.class, eviction = MybatisRedisCache.class)
+public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
+
+        }
+#end

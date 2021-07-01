@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
  * @date 2021/6/30 18:56
  *     <p>
  */
+@RequestMapping("/api/user")
 @RestController
 @RequiredArgsConstructor
 public class UserController {
