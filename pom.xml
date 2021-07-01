@@ -11,6 +11,8 @@
     <modules>
         <module>common</module>
         <module>user</module>
+        <module>goods</module>
+        <module>generator</module>
     </modules>
 
     <!--父工程-->
@@ -38,6 +40,9 @@
         <mysql.version>8.0.25</mysql.version>
         <!--mybatis-plus-->
         <mybatis-plus.version>3.4.3.1</mybatis-plus.version>
+        <!--mybatis-代码生成-->
+        <mybatis-plus-generator.version>3.0.1</mybatis-plus-generator.version>
+        <velocity-engine-core.version>2.2</velocity-engine-core.version>
 
         <!--各个微服务的版本号-->
         <dcc-parent.version>1.0.0</dcc-parent.version>
