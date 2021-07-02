@@ -1,5 +1,5 @@
 server:
-  port: 8061
+  port: 8062
 spring:
   application:
     name: service-goods
@@ -17,4 +17,7 @@ spring:
       max-lifetime: 1800000
       connection-timeout: 30000
       connection-test-query: select now()
-
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.16.1.27:8858

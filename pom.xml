@@ -49,7 +49,7 @@
         <dcc-parent.version>1.0.0</dcc-parent.version>
         <dcc-common.version>1.0.0</dcc-common.version>
         <dcc-user.version>1.0.0</dcc-user.version>
-        <dcc-com.dcc.order.version>1.0.0</dcc-com.dcc.order.version>
+        <dcc-order.version>1.0.0</dcc-order.version>
     </properties>
 
     <dependencyManagement>

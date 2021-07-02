@@ -1,8 +1,7 @@
 package com.dcc.domain;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 /**
  * @author jianchun.chen
@@ -10,6 +9,9 @@ import lombok.EqualsAndHashCode;
  *     <p>
  */
 @Data
+@NoArgsConstructor
+@Builder
+@AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @TableName("goods_order")
 public class Order extends BaseDomain {

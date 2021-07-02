@@ -5,6 +5,7 @@ import com.dcc.domain.dto.GoodsDto;
 import com.dcc.service.GoodsService;
 import com.dcc.util.DomainHelper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
  * @date 2021/6/30 18:56
  *     <p>
  */
+@Slf4j
 @RequestMapping("/api/goods")
 @RestController
 @RequiredArgsConstructor
@@ -21,6 +23,7 @@ public class GoodsController {
 
   @GetMapping("/{id}")
   public Goods getGoods(@PathVariable long id) {
+    log.info("get goods id = {}", id);
     return goodsService.getById(id);
   }
 
