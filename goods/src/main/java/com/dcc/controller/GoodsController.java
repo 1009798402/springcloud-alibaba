@@ -23,6 +23,7 @@ public class GoodsController {
 
   @GetMapping("/{id}")
   public Goods getGoods(@PathVariable long id) {
+
     log.info("get goods id = {}", id);
     return goodsService.getById(id);
   }
