@@ -1,9 +1,14 @@
 package com.dcc.service.impl;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.dcc.domain.Order;
+import com.dcc.exception.DefaultBlockExceptionHandler;
+import com.dcc.exception.DefaultFallBackHandler;
 import com.dcc.mapper.OrderMapper;
 import com.dcc.service.OrderService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,5 +17,41 @@ import org.springframework.stereotype.Service;
  * @author jianchun.chen
  * @since 2021-07-01
  */
+@Slf4j
 @Service
-public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements OrderService {}
+public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements OrderService {
+
+  int i = 0;
+
+  @SentinelResource(
+      value = "doOrder",
+      blockHandlerClass = DefaultBlockExceptionHandler.class,
+      blockHandler = "blockHandler",
+      fallbackClass = DefaultFallBackHandler.class,
+      fallback = "fallBackHandler")
+  @Override
+  public String doOrder() {
+    i++;
+    if (i % 3 == 0) {
+      i = 1 / 0;
+    }
+    log.info("do order...");
+    return "success";
+  }
+
+  public String doOrderBlockHandler(BlockException e) {
+
+    // sentinel 的block异常
+
+    log.info("doOrderBlockHandler... e = {}", e.getMessage());
+    return "doOrderBlockHandler";
+  }
+
+  public String doOrderFallBack(Throwable t) {
+
+    // 业务逻辑异常
+
+    log.info("doOrderFallBack... t = {}", t.getMessage());
+    return "doOrderFallBack";
+  }
+}

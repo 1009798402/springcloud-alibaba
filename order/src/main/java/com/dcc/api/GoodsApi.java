@@ -1,5 +1,6 @@
-package com.dcc.service;
+package com.dcc.api;
 
+import com.dcc.api.fallback.GoodsApiFallBack;
 import com.dcc.domain.Goods;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,8 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @date 2021/7/2 11:18
  *     <p>
  */
-@FeignClient(value = "service-goods")
-public interface GoodsService {
+@FeignClient(value = "service-goods", fallback = GoodsApiFallBack.class, path = "/api/goods")
+public interface GoodsApi {
 
   /**
    * id 查询
@@ -19,6 +20,10 @@ public interface GoodsService {
    * @param id 商品id
    * @return 商品
    */
-  @GetMapping("/api/goods/{id}")
-  Goods getById(@PathVariable Long id);
+  @GetMapping("/{id}")
+  Goods getById(@PathVariable("id") Long id);
+
+  /** test */
+  @GetMapping("/test")
+  String test();
 }

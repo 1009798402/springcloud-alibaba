@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+
 /**
  * @author jianchun.chen
  * @date 2021/6/30 18:56
@@ -20,6 +22,19 @@ import org.springframework.web.bind.annotation.*;
 public class GoodsController {
 
   private final GoodsService goodsService;
+
+  int i = 0;
+
+  @GetMapping("/test")
+  public String test() {
+
+    i++;
+    if (i % 3 == 0) {
+      i = 1 / 0;
+    }
+
+    return LocalDateTime.now() + "goods test";
+  }
 
   @GetMapping("/{id}")
   public Goods getGoods(@PathVariable long id) {

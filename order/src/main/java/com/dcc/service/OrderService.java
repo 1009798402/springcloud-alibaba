@@ -9,4 +9,7 @@ import com.dcc.domain.Order;
  * @author jianchun.chen
  * @since 2021-07-01
  */
-public interface OrderService extends IService<Order> {}
+public interface OrderService extends IService<Order> {
+
+  String doOrder();
+}

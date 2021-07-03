@@ -20,7 +20,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.2</version>
+        <version>2.3.2.RELEASE</version>
     </parent>
 
     <!--版本号统一管理-->
@@ -32,9 +32,9 @@
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
         <!--spring cloud-->
-        <spring-cloud.version>2020.0.0</spring-cloud.version>
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
         <!--spring cloud alibaba-->
-        <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
+        <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
         <!--fastjson-->
         <fastjson.version>1.2.76</fastjson.version>
         <!--mysql-->
