@@ -2,7 +2,7 @@ server:
   port: 8051
 spring:
   application:
-    name: service-order
+    name: order
   #hikari 连接池
   datasource:
     url: jdbc:mysql://172.16.1.22:3306/spring-cloud-albaba?useUnicode=true&characterEncoding=UTF-8&useSSL=false&useAffectedRows=true

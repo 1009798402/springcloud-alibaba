@@ -1,0 +1,43 @@
+server:
+  port: 2021
+spring:
+  application:
+    name: api-gateway
+  datasource:
+    url: jdbc:mysql://172.16.1.22:3306/spring-cloud-albaba?useUnicode=true&characterEncoding=UTF-8&useSSL=false&useAffectedRows=true
+    password: Bz5jdUgzdo6HXA7x
+    username: douchacha
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 180000
+      maximum-pool-size: 5
+      auto-commit: true
+      pool-name: dcc-hikari-cp
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: select now()
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.16.1.27:8858
+    gateway:
+      discovery:
+        locator:
+          enabled: true #gatway,nacos打通
+      routes:
+        - id: goods_route
+          uri: lb://goods
+          order: 1
+          predicates: #转发满足的条件
+            - Path=/goods/**
+            # - Age=18,60 #自定义路由条件
+          filters: #过滤器
+            - Log=true
+            - StripPrefix=1 #请求转发之前去掉一层路径
+#        - id: order_route
+#          uri: lb://service-order
+#          order: 1
+#          predicates:
+#            - Path=/order/**
+#          filters:
+#          #- StripPrefix=1

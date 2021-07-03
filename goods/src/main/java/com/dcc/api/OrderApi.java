@@ -1,4 +1,4 @@
-package com.dcc.service;
+package com.dcc.api;
 
 import com.dcc.domain.Order;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @date 2021/7/2 11:57
  *     <p>
  */
-@FeignClient(value = "service-order")
-public interface OrderService {
+@FeignClient(value = "order", path = "/c")
+public interface OrderApi {
 
   /**
    * id查订单
@@ -19,6 +19,6 @@ public interface OrderService {
    * @param id 订单id
    * @return 订单
    */
-  @GetMapping("/api/order/{id}")
+  @GetMapping("/{id}")
   Order getById(@PathVariable Long id);
 }

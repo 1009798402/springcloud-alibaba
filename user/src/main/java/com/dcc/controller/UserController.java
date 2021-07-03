@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
  *     <p>
  */
 @Slf4j
-@RequestMapping("/api/user")
+@RequestMapping("/c")
 @RestController
 @RequiredArgsConstructor
 public class UserController {

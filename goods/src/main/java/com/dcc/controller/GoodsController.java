@@ -16,23 +16,16 @@ import java.time.LocalDateTime;
  *     <p>
  */
 @Slf4j
-@RequestMapping("/api/goods")
+@RequestMapping("/c")
 @RestController
 @RequiredArgsConstructor
 public class GoodsController {
 
   private final GoodsService goodsService;
 
-  int i = 0;
-
   @GetMapping("/test")
   public String test() {
-
-    i++;
-    if (i % 3 == 0) {
-      i = 1 / 0;
-    }
-
+    log.info("test------------");
     return LocalDateTime.now() + "goods test";
   }
 

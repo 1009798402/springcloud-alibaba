@@ -14,6 +14,7 @@
         <module>goods</module>
         <module>generator</module>
         <module>order</module>
+        <module>api-gateway</module>
     </modules>
 
     <!--父工程-->
@@ -50,6 +51,7 @@
         <dcc-common.version>1.0.0</dcc-common.version>
         <dcc-user.version>1.0.0</dcc-user.version>
         <dcc-order.version>1.0.0</dcc-order.version>
+        <dcc-gateway.version>1.0.0</dcc-gateway.version>
     </properties>
 
     <dependencyManagement>
