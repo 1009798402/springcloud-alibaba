@@ -6,6 +6,7 @@ import com.dcc.service.GoodsService;
 import com.dcc.util.DomainHelper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -16,24 +17,18 @@ import java.time.LocalDateTime;
  *     <p>
  */
 @Slf4j
-@RequestMapping("/f")
+@RequestMapping("/b")
 @RestController
 @RequiredArgsConstructor
-public class GoodsController {
+public class BackstageGoodsController {
 
   private final GoodsService goodsService;
 
   @GetMapping("/test")
   public String test() {
-    int i = 1 / 0;
     log.info("test------------");
+    Assert.isTrue(false, "错了");
     return LocalDateTime.now() + "goods test";
-  }
-
-  @GetMapping("/test2")
-  public String test2() {
-    log.info("test------------");
-    return LocalDateTime.now() + "goods test22222222222";
   }
 
   @GetMapping("/{id}")

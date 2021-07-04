@@ -1,4 +1,4 @@
-package com.dcc.exception;
+package com.dcc.config.exception;
 
 import com.alibaba.csp.sentinel.adapter.spring.webmvc.callback.BlockExceptionHandler;
 import com.alibaba.csp.sentinel.slots.block.BlockException;

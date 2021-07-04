@@ -2,7 +2,7 @@ server:
   port: 8061
 spring:
   application:
-    name: goods
+    name: dcc-goods
   #hikari 连接池
   datasource:
     url: jdbc:mysql://172.16.1.22:3306/spring-cloud-albaba?useUnicode=true&characterEncoding=UTF-8&useSSL=false&useAffectedRows=true

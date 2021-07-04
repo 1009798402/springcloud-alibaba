@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @date 2021/7/2 11:18
  *     <p>
  */
-@FeignClient(value = "goods", fallback = GoodsApiFallBack.class, path = "/c")
+@FeignClient(value = "goods", fallback = GoodsApiFallBack.class, path = "/f")
 public interface GoodsApi {
 
   /**

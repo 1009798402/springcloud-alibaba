@@ -1,4 +1,4 @@
-package com.dcc.exception;
+package com.dcc.config.exception;
 
 import lombok.extern.slf4j.Slf4j;
 

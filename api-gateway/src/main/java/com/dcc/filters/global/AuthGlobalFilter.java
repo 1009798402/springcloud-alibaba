@@ -1,4 +1,4 @@
-package com.dcc.filters;
+package com.dcc.filters.global;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -42,6 +42,6 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
 
   @Override
   public int getOrder() {
-    return 0;
+    return -5;
   }
 }

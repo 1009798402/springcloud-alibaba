@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @date 2021/7/2 11:57
  *     <p>
  */
-@FeignClient(value = "order", path = "/c")
+@FeignClient(value = "order", path = "/f")
 public interface OrderApi {
 
   /**
