@@ -47,7 +47,7 @@ public class CodeGenerator {
     //    String tableName = scanner("表名");
     //    String tablePrefix = scanner("表前缀(无前缀输入#)").replaceAll("#", "");
 
-    autoGenerator("com.dcc.order", "com.dcc.order", "#");
+    autoGenerator("log", "tx_log", "#");
     //    autoGenerator(moduleName, tableName, tablePrefix);
   }
 

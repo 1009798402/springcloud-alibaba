@@ -45,6 +45,9 @@
         <!--mybatis-代码生成-->
         <mybatis-plus-generator.version>3.0.1</mybatis-plus-generator.version>
         <javafx-controls.version>16</javafx-controls.version>
+        <!--rocket和client-->
+        <rocketmq.version>2.2.0</rocketmq.version>
+        <rocketmq-client.version>4.9.0</rocketmq-client.version>
 
         <!--各个微服务的版本号-->
         <dcc-parent.version>1.0.0</dcc-parent.version>

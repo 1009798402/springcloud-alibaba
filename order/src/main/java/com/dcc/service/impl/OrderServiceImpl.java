@@ -8,7 +8,9 @@ import com.dcc.config.exception.DefaultFallBackHandler;
 import com.dcc.domain.Order;
 import com.dcc.mapper.OrderMapper;
 import com.dcc.service.OrderService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.stereotype.Service;
 
 /**
@@ -19,7 +21,10 @@ import org.springframework.stereotype.Service;
  */
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements OrderService {
+
+  private final RocketMQTemplate rocketMQTemplate;
 
   int i = 0;
 
@@ -36,6 +41,12 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
       i = 1 / 0;
     }
     log.info("do order...");
+
+    // 发送消息 topic  消息内容
+    // 1. 可靠同步发送
+    rocketMQTemplate.syncSend("topic", new Order());
+    // 2. 可靠异步发送  3. 单项发送
+
     return "success";
   }
 

@@ -6,6 +6,8 @@ import com.dcc.service.GoodsService;
 import com.dcc.util.DomainHelper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -19,15 +21,18 @@ import java.time.LocalDateTime;
 @RequestMapping("/f")
 @RestController
 @RequiredArgsConstructor
+@RefreshScope
 public class GoodsController {
 
   private final GoodsService goodsService;
 
+  @Value("${goods.name}")
+  private String name;
+
   @GetMapping("/test")
   public String test() {
-    int i = 1 / 0;
     log.info("test------------");
-    return LocalDateTime.now() + "goods test";
+    return LocalDateTime.now() + name;
   }
 
   @GetMapping("/test2")

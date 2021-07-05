@@ -4,6 +4,7 @@ import com.dcc.api.GoodsApi;
 import com.dcc.domain.Goods;
 import com.dcc.domain.Order;
 import com.dcc.service.OrderService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.Assert;
@@ -31,6 +32,7 @@ public class OrderController {
   }
 
   @GetMapping("/test2")
+  @GlobalTransactional // seata事务回滚
   public String test2() {
 
     return orderService.doOrder();

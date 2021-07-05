@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: dcc-goods
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: 172.16.1.27:8858
+        shared-configs: dev-common.yaml
+  profiles:
+    active: dev
